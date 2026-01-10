@@ -16,7 +16,7 @@ models:
 
       - name: week_start
         tests:
-          - not_null   
+          - not_null
 
       - name: cleaned_amount
         tests:
