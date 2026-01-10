@@ -21953,3 +21953,40 @@ select distinct
 [0m12:06:52.072511 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027CAF881390>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027CAFB220E0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000027CB1ABF250>]}
 [0m12:06:52.073510 [debug] [MainThread]: Flushing usage events
 [0m12:06:53.030542 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:16:54.331182 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207FA161360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207FC368580>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207FC36B550>]}
+
+
+============================== 16:16:54.342216 | 1ac1de9b-4bc3-4b5a-a103-000bed0a792e ==============================
+[0m16:16:54.342216 [info ] [MainThread]: Running with dbt=1.11.2
+[0m16:16:54.344185 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'printer_width': '80', 'write_json': 'True', 'introspect': 'True', 'log_cache_events': 'False', 'empty': 'None', 'cache_selected_only': 'False', 'log_format': 'default', 'debug': 'False', 'fail_fast': 'False', 'profiles_dir': 'C:\\Users\\mayur\\AppData\\Roaming\\dbt', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'warn_error': 'None', 'partial_parse': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'invocation_command': 'dbt docs serve', 'use_experimental_parser': 'False', 'log_path': 'C:\\emp_analytics\\ecommerce_orders_analytics\\logs'}
+[0m16:16:54.857034 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '1ac1de9b-4bc3-4b5a-a103-000bed0a792e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207F8E0A110>]}
+[0m16:16:55.009970 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '1ac1de9b-4bc3-4b5a-a103-000bed0a792e', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207FBB229E0>]}
+[0m17:45:53.707430 [error] [MainThread]: Encountered an error:
+
+[0m17:45:53.810221 [error] [MainThread]: Traceback (most recent call last):
+  File "C:\emp_analytics\ecommerce_orders_analytics\venv\lib\site-packages\dbt\cli\requires.py", line 182, in wrapper
+    result, success = func(*args, **kwargs)
+  File "C:\emp_analytics\ecommerce_orders_analytics\venv\lib\site-packages\dbt\cli\requires.py", line 128, in wrapper
+    return func(*args, **kwargs)
+  File "C:\emp_analytics\ecommerce_orders_analytics\venv\lib\site-packages\dbt\cli\requires.py", line 276, in wrapper
+    return func(*args, **kwargs)
+  File "C:\emp_analytics\ecommerce_orders_analytics\venv\lib\site-packages\dbt\cli\requires.py", line 321, in wrapper
+    return func(*args, **kwargs)
+  File "C:\emp_analytics\ecommerce_orders_analytics\venv\lib\site-packages\dbt\cli\requires.py", line 368, in wrapper
+    return func(*args, **kwargs)
+  File "C:\emp_analytics\ecommerce_orders_analytics\venv\lib\site-packages\dbt\cli\main.py", line 307, in docs_serve
+    results = task.run()
+  File "C:\emp_analytics\ecommerce_orders_analytics\venv\lib\site-packages\dbt\task\docs\serve.py", line 29, in run
+    httpd.serve_forever()
+  File "C:\Users\mayur\AppData\Local\Programs\Python\Python310\lib\socketserver.py", line 232, in serve_forever
+    ready = selector.select(poll_interval)
+  File "C:\Users\mayur\AppData\Local\Programs\Python\Python310\lib\selectors.py", line 324, in select
+    r, w, _ = self._select(self._readers, self._writers, [], timeout)
+  File "C:\Users\mayur\AppData\Local\Programs\Python\Python310\lib\selectors.py", line 315, in _select
+    r, w, x = select.select(r, w, w, timeout)
+KeyboardInterrupt
+
+[0m17:45:53.814193 [debug] [MainThread]: Command `dbt docs serve` failed at 17:45:53.814193 after 5339.69 seconds
+[0m17:45:53.816190 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207FA161360>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207FC71A140>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000207FC71A050>]}
+[0m17:45:53.818194 [debug] [MainThread]: Flushing usage events
+[0m17:45:54.841783 [debug] [MainThread]: An error was encountered while trying to flush usage events
