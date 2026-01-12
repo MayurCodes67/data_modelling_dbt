@@ -21,23 +21,31 @@ Total models: **9**
 ### Staging (1)
 - `staging_orders`
 
-### Intermediate (6)
-- `weekly_order_revenue`
-- `weekly_order_revenue_lag_1w`
-- `weekly_order_revenue_lag_4w`
-- `weekly_order_revenue_rolling_4w`
-- `wow_order_revenue_percentage_growth`
-- `wow_order_revenue_cv_4w`
+### Intermediate (12)
+- `int_weekly_order_revenue`
+- `int_weekly_order_revenue_lag_1w`
+- `int_weekly_order_revenue_lag_4w`
+- `int_weekly_order_revenue_rolling_4w`
+- `int_wow_order_revenue_growth_ratio`
+- `int_wow_order_revenue_cv_4w`
+- `int_weekly_active_customers`
+- `int_weekly_active_customers_lag`
+- `int_weekly_customers_churn_flag`
+- `int_weekly_customers_churned_customers`
+- `int_weekly_customers_retain_flag`
+- `int_weekly_customers_retained_customers`
 
-### Marts (2)
+### Marts (4)
 - `fact_order_weekly_growth`
 - `fact_order_revenue_consistency`
+- `fact_weekly_customers_churn_rate`
+- `fact_weekly_customers_retain_rate`
 
 ---
 
 ## Tests
 
-Total tests: **~31**
+Total tests: **~42**
 
 ### Schema & Integrity Tests
 - not_null
@@ -47,12 +55,12 @@ Total tests: **~31**
 
 ### Mathematical Correctness Tests
 - formula correctness tests
-- zero denominator handling for ratio metrics
+- zero denominator handling tests 
+- expression_is_true <= tests
 
 ### Business Logic Tests
-- flag correctness tests for:
-  - WOW(week_over_week) growth classification
-  - revenue consistency classification
+- flag correctness tests
+- WOW(week_over_week) classification tests
 
 ---
 

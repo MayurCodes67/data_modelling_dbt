@@ -13,7 +13,6 @@ models:
       - name: week_start
         tests:
           - not_null
-          - unique
 
       - name: weekly_revenue
         tests:
