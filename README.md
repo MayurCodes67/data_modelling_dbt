@@ -16,7 +16,7 @@ trustworthy metrics and enforcing correctness through comprehensive testing.
 
 ## Models
 
-Total models: **9**
+Total models: **17**
 
 ### Staging (1)
 - `staging_orders`
